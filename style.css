@@ -1,0 +1,107 @@
+body{
+    background-image: url("img/background2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.header, .main{
+    width: 1050px;
+    margin: 0 auto;
+}
+.header{
+    margin-top: 50px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    height: 700px;
+}
+.header__heading{
+    width: 100%;
+    display: flex;
+    opacity: 0.4;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.logo-image{
+    margin-right: 25px;
+}
+.article{
+    width: 420px;
+}
+.article__heading{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.form-container{
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 4px;
+}
+.form{
+    width: 380px;
+    border-radius: 4px;
+    background-color: rgb(244,244,244);
+    padding: 20px 0;
+}
+.form-register{
+
+}
+.form-element{
+    background-color: rgba(248,248,248);
+    height: 35px;
+    border: 0;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 10px;
+    width: calc(100% - 88px);
+    font-size: 18px;
+    color: rgb(155,155,155);
+}
+.form-group{
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgba(248,248,248);
+    height: 40px;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 4px;
+}
+.paragraph_hidden{
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+.label{
+    width: 60px;
+    height: 26px;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    cursor: text;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.label__img{
+    opacity: 0.1;
+}
+.form__select{
+    background: url("img/arrow.png") no-repeat 95% center;
+    padding-left: 15px;
+    padding-right: 0;
+    cursor: pointer;
+    width: calc(100% - 55px);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    color: rgb(155,155,155);
+}
