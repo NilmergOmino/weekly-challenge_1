@@ -90,7 +90,7 @@ body{
     transition: 0.3s;
 }
 .form-element{
-    background-color: rgb(244,244,244);
+    background-color: rgba(244,244,244,0);
     height: 35px;
     border: 0;
     margin: 0;
