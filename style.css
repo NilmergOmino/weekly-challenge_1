@@ -1,7 +1,8 @@
 body{
-    background-image: url("img/background2.png");
+    background-image: url("img/background.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-family: 'Titillium Web', sans-serif;
 }
 .header, .main{
     width: 1050px;
@@ -16,12 +17,17 @@ body{
     flex-wrap: wrap;
     justify-content: start;
     align-items: center;
-    height: 700px;
+    height: 1250px;
+}
+.footer{
+    width: 420px;
+    height: 300px;
+    background-color: red;
 }
 .header__heading{
     width: 100%;
     display: flex;
-    opacity: 0.4;
+    opacity: 0.3;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -36,6 +42,10 @@ body{
     width: 100%;
     text-align: center;
     color: white;
+    font-size: 34px;
+    font-weight: 600;
+    margin: 20px 0 7px 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 }
 .form-container{
     background-color: rgba(0,0,0,0.3);
@@ -48,19 +58,20 @@ body{
     background-color: rgb(244,244,244);
     padding: 20px 0;
 }
-.form-register{
-
+.article-register{
+    order: 1;
 }
-.form-element{
-    background-color: rgba(248,248,248);
-    height: 35px;
-    border: 0;
-    margin: 0;
-    padding-left: 15px;
-    padding-right: 10px;
-    width: calc(100% - 88px);
-    font-size: 18px;
-    color: rgb(155,155,155);
+.article-send-email{
+    order: 2;
+}
+.article-sign-in{
+    order: 3;
+}
+.article-recover{
+    order: 4;
+}
+.article-subscribe{
+    order: 5;
 }
 .form-group{
     border: 1px solid rgba(0,0,0,0.2);
@@ -72,12 +83,30 @@ body{
     margin-bottom: 20px;
     align-items: center;
     border-radius: 4px;
+    transition: 0.3s
 }
-.paragraph_hidden{
+.group_active{
+    border: 1px solid rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+.form-element{
+    background-color: rgba(248,248,248);
+    height: 35px;
+    border: 0;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 10px;
+    width: calc(100% - 88px);
+    font-size: 18px;
+    color: rgb(155,155,155);
+    font-family: 'Titillium Web', sans-serif;
+}
+.span_hidden{
     visibility: hidden;
     height: 0;
     margin: 0;
     padding: 0;
+    font-size: 0;
 }
 .label{
     width: 60px;
@@ -91,6 +120,11 @@ body{
 }
 .label__img{
     opacity: 0.1;
+    transition: 0.3s;
+}
+.label__img_active{
+    opacity: 0.4;
+    transition: 0.3s;
 }
 .form__select{
     background: url("img/arrow.png") no-repeat 95% center;
@@ -104,4 +138,185 @@ body{
     -o-appearance: none;
     appearance: none;
     color: rgb(155,155,155);
+}
+.checkbox-container{
+    border: 0;
+    background-color: inherit;
+    font-size: 18px;
+    color: rgb(155,155,155);
+    height: auto;
+    margin-bottom: 15px;
+}
+.checkbox{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    margin: 0 10px 0 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox:checked:after{
+    content: '';
+    width: 13px;
+    height: 13px;
+    display: block;
+    border-radius: 4px;
+    background: rgb(161, 215, 62);
+    background: -moz-linear-gradient(top, rgb(161, 215, 62) 0%, rgb(129, 197, 32) 100%);
+    background: -webkit-linear-gradient(top, rgb(161, 215, 62) 0%,rgb(129, 197, 32) 100%);
+    background: linear-gradient(to bottom, rgb(161, 215, 62) 0%,rgb(129, 197, 32) 100%);
+    transition: 0.2s;
+}
+.checkbox:not(:checked):after{
+    transition: 0.2s;
+    content: '';
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-radius: 4px;
+    background: rgb(161, 215, 62);
+    background: -moz-linear-gradient(top, rgb(161, 215, 62) 0%, rgb(129, 197, 32) 100%);
+    background: -webkit-linear-gradient(top, rgb(161, 215, 62) 0%,rgb(129, 197, 32) 100%);
+    background: linear-gradient(to bottom, rgb(161, 215, 62) 0%,rgb(129, 197, 32) 100%);
+}
+.submit{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px rgb(44, 107, 3);
+    cursor: pointer;
+    padding: 5px 0;
+    border-radius: 4px;
+    border: 1px solid rgb(59, 154, 0);
+    background: rgb(161, 215, 62);
+    background: -moz-linear-gradient(top, rgb(161, 215, 62) 0%, rgb(129, 197, 32) 100%);
+    background: -webkit-linear-gradient(top, rgb(161, 215, 62) 0%,rgb(129, 197, 32) 100%);
+    background: linear-gradient(to bottom, rgb(161, 215, 62) 0%,rgb(129, 197, 32) 100%);
+}
+.submit_sign-up{
+    width: 90%;
+    margin: 0 auto;
+}
+.submit_sign-in{
+    width: 45%;
+}
+.submit_recover, .submit_subscribe{
+    width: 45%;
+    font-size: 18px;
+}
+.button_opacity{
+    width: 45%;
+    font-size: 18px;
+    border: 1px solid rgba(59, 154, 0,0.3);
+    background: rgba(161, 215, 62,0.5);
+    background: -moz-linear-gradient(top, rgba(161, 215, 62,0.5) 0%, rgba(129, 197, 32,0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(161, 215, 62,0.5) 0%,rgba(129, 197, 32,0.5) 100%);
+    background: linear-gradient(to bottom, rgba(161, 215, 62,0.5) 0%,rgba(129, 197, 32,0.5) 100%);
+}
+.button_decline{
+    width: 45%;
+    font-size: 18px;
+    border: 1px solid rgb(162, 32, 42);
+    background: rgb(245, 94, 111);
+    background: -moz-linear-gradient(top, rgb(245, 94, 111) 0%, rgb(240, 55, 69) 100%);
+    background: -webkit-linear-gradient(top, rgb(245, 94, 111) 0%,rgb(240, 55, 69) 100%);
+    background: linear-gradient(to bottom, rgb(245, 94, 111) 0%,rgb(240, 55, 69) 100%);
+}
+.container_inline{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkbox-container_inline{
+    width: 50%;
+    margin: 0;
+}
+.textarea{
+    width: calc(90% - 20px);
+    padding: 10px;
+    height: 210px;
+    font-size: 18px;
+    color: rgb(155,155,155);
+    font-family: 'Titillium Web', sans-serif;
+}
+.textarea:hover{
+    color: rgb(105,105,105);
+}
+.form-element:hover{
+    color: rgb(105,105,105);
+}
+.form-element:focus{
+    color: rgb(105,105,105);
+}
+.textarea:focus{
+    color: rgb(105,105,105);
+    border: 1px solid rgba(0,0,0,0.4);
+}
+.submit:hover{
+    opacity: 0.85;
+}
+.submit{
+    transition: transform 0.1;
+}
+.submit:focus{
+    opacity: 0.85;
+}
+.checkbox-container:hover{
+    color: rgb(105,105,105);
+}
+.checkbox:focus{
+    color: rgb(105,105,105);
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+.waterprint-img-container{
+    opacity: 0.2;
+    width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    order: 10;
+    margin-top: 50px;
+}
+.waterprint-image{
+    margin: 10px;
+    margin-top: 20px;
+}
+@media (max-width: 1060px) {
+    .header, .main{
+        width: 100%;
+    }
+}
+@media (max-width: 900px) {
+    .main{
+        height: auto;
+    }
+}
+@media (max-width: 445px) {
+    .logo-text{
+        margin-top: 20px;
+    }
+    .article{
+        width: calc(100% - 10px);
+        margin: 0 auto;
+    }
+    .form{
+        width: 100%;
+    }
+    .waterprint-img-container{
+        width: 100%;
+    }
 }

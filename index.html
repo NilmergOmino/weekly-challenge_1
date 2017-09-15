@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nilmerg Omino">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>zadanie 1</title>
     <!-- strona zrealizowana na podstawie projektu graficznego będącego zadaniem 1 udostępnionym na łamach grupy Weekly WebDev Challenge -->
@@ -12,7 +13,7 @@
 <body>
     <header class="header">
         <h1 class="header__heading">
-            <img class="logo-image" src="img/logo-image.png" alt="masteralb">
+            <img class="logo-image" src="img/logo-image.png" alt="">
             <img class="logo-text" src="img/logo-text.png" alt="masteralb creative">
         </h1>
     </header>
@@ -20,42 +21,42 @@
         <article class="article article-register">
             <h2 class="article__heading">Register Form</h2>
             <div class="form-container">
-                <form method="post" class="form form-register">
+                <form method="post" class="form">
                     <div class="form-group">
                         <label class="label" for="register-username">
-                            <p class="paragraph_hidden">Username</p>
+                            <span class="span_hidden">Username</span>
                             <img class="label__img" src="img/person.png" alt="person">
                         </label>
-                        <input type="text" class="form-element" name="username" placeholder="Username" id="register-username">
+                        <input type="text" class="form-element" name="username" placeholder="Username" id="register-username" required>
                     </div>
                     <div class="form-group">
                         <label class="label" for="register-password">
-                            <p class="paragraph_hidden">Password</p>
+                            <span class="span_hidden">Password</span>
                             <img class="label__img" src="img/lock.png" alt="lock">
                         </label>
-                        <input type="password" class="form-element" name="password" placeholder="Password" id="register-password">
+                        <input type="password" class="form-element" name="password" placeholder="Password" id="register-password" required>
                     </div>
                     <div class="form-group">
                         <label class="label" for="register-confirm-password">
-                            <p class="paragraph_hidden">Confirm Password</p>
+                            <span class="span_hidden">Confirm Password</span>
                             <img class="label__img" src="img/lock.png" alt="lock">
                         </label>
-                        <input type="password" class="form-element" name="confirm-password" placeholder="Confirm Password" id="register-confirm-password">
+                        <input type="password" class="form-element" name="confirm-password" placeholder="Confirm Password" id="register-confirm-password" required>
                     </div>
                     <div class="form-group">
                         <label class="label" for="register-email">
-                            <p class="paragraph_hidden">Email</p>
+                            <span class="span_hidden">Email</span>
                             <img class="label__img" src="img/email.png" alt="email">
                         </label>
-                        <input type="email" class="form-element" name="confirm-password" placeholder="Email" id="register-email">
+                        <input type="email" class="form-element" name="email" placeholder="Email" id="register-email" required>
                     </div>
                     <div class="form-group">
                         <label class="label" for="register-location">
-                            <p class="paragraph_hidden">Your Location</p>
+                            <span class="span_hidden">Your Location</span>
                             <img class="label__img" src="img/pointer.png" alt="pointer">
                         </label>
-                        <select class="form-element form__select" name="confirm-password" id="register-location">
-                            <option value="" disabled selected hidden>Your Location</option>
+                        <select class="form-element form__select" name="register-location" id="register-location" required>
+                            <option value="" disabled selected hidden class="xxx">Your Location</option>
                             <option value="AF">Afghanistan</option>
                         	<option value="AX">Åland Islands</option>
                         	<option value="AL">Albania</option>
@@ -307,30 +308,94 @@
                         	<option value="ZW">Zimbabwe</option>
                         </select>
                     </div>
+                    <div class="form-group checkbox-container">
+                        <input class="checkbox" type="checkbox" name="accept-terms" id="accept-terms" required>
+                        <label for="accept-terms" class="label-checkbox">I have read and accept the terms of use.</label>
+                    </div>
+                    <input type="submit" value="Sign up" class="submit submit_sign-up">
                 </form>
             </div>
         </article>
         <article class="article article-sign-in">
             <h2 class="article__heading">Sign In Form</h2>
             <div class="form-container">
-                <form class="form">
-
+                <form class="form" method="post">
+                    <div class="form-group">
+                        <label class="label" for="sign-in-username">
+                            <span class="span_hidden">Username</span>
+                            <img class="label__img" src="img/person.png" alt="person">
+                        </label>
+                        <input type="text" class="form-element" name="username" placeholder="Username" id="sign-in-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="sign-in-password">
+                            <span class="span_hidden">Password</span>
+                            <img class="label__img" src="img/lock.png" alt="lock">
+                        </label>
+                        <input type="password" class="form-element" name="password" placeholder="Password" id="sign-in-password" required>
+                    </div>
+                    <div class="container_inline">
+                        <div class="form-group checkbox-container checkbox-container_inline">
+                            <input class="checkbox" type="checkbox" name="remember-me" id="remember-me">
+                            <label for="remember-me" class="label-checkbox">Remember me</label>
+                        </div>
+                        <input type="submit" value="Sign in" class="submit submit_sign-in">
+                    </div>
                 </form>
             </div>
         </article>
         <article class="article article-recover">
             <h2 class="article__heading">Recover Form</h2>
             <div class="form-container">
-                <form class="form">
-
+                <form class="form" method="post">
+                    <div class="form-group">
+                        <label class="label" for="recover-email">
+                            <span class="span_hidden">Enter your Email</span>
+                            <img class="label__img" src="img/email.png" alt="email">
+                        </label>
+                        <input type="email" class="form-element" name="email" placeholder="Enter your Email" id="recover-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="recover-phone">
+                            <span class="span_hidden">Enter your Phone number</span>
+                            <img class="label__img" src="img/phone.png" alt="phone">
+                        </label>
+                        <input type="tel" class="form-element" name="phone-number" placeholder="Enter your Phone number" id="recover-phone" required>
+                    </div>
+                    <div class="container_inline">
+                        <input type="submit" value="Send" class="submit submit_recover">
+                        <button class="submit button_opacity">Done</button>
+                    </div>
                 </form>
             </div>
         </article>
         <article class="article article-send-email">
             <h2 class="article__heading">Send Email</h2>
             <div class="form-container">
-                <form class="form">
-
+                <form class="form" method="post">
+                    <div class="form-group">
+                        <label class="label" for="send-name">
+                            <span class="span_hidden">Your Name</span>
+                            <img class="label__img" src="img/person.png" alt="person">
+                        </label>
+                        <input type="text" class="form-element" name="name" placeholder="Your Name" id="send-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="send-email">
+                            <span class="span_hidden">Your Email</span>
+                            <img class="label__img" src="img/email.png" alt="email">
+                        </label>
+                        <input type="email" class="form-element" name="email" placeholder="Your Email" id="send-email" required>
+                    </div>
+                    <label for="text-message">
+                        <span class="span_hidden">Type your message</span>
+                    </label>
+                    <textarea class="form-group textarea" name="message" id="text-message" placeholder="Type your message..." required></textarea>
+                    <div class="form-group checkbox-container">
+                        <input class="checkbox" type="checkbox" name="copy-email" id="send-copy-email">
+                        <label for="send-copy-email" class="label-checkbox">Send a copy to my Email</label>
+                    </div>
+                    <input type="submit" value="Send Email" class="submit submit_sign-up">
                 </form>
             </div>
         </article>
@@ -338,10 +403,26 @@
             <h2 class="article__heading">Subscribe Form</h2>
             <div class="form-container">
                 <form class="form">
-
+                    <div class="form-group">
+                        <label class="label" for="subscribe-email">
+                            <span class="span_hidden">Enter your Email</span>
+                            <img class="label__img" src="img/email.png" alt="email">
+                        </label>
+                        <input type="email" class="form-element" name="email" placeholder="Enter your Email" id="subscribe-email" required>
+                    </div>
+                    <div class="container_inline">
+                        <input type="submit" value="Subscribe" class="submit submit_subscribe">
+                        <button class="submit button_decline">No, Thanks</button>
+                    </div>
                 </form>
             </div>
         </article>
+        <div class="waterprint-img-container">
+            <img src="img/logo-image-small.png" alt="" class="waterprint-image">
+            <img src="img/logo-text-small.png" alt="" class="waterprint-image">
+            <img src="img/link-mainpage.png" alt="" class="waterprint-image">
+        </div>
     </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
