@@ -75,7 +75,7 @@ body{
 }
 .form-group{
     border: 1px solid rgba(0,0,0,0.2);
-    background-color: rgba(248,248,248);
+    background-color: rgb(244,244,244);
     height: 40px;
     display: flex;
     width: 90%;
@@ -90,7 +90,7 @@ body{
     transition: 0.3s;
 }
 .form-element{
-    background-color: rgba(248,248,248);
+    background-color: rgb(244,244,244);
     height: 35px;
     border: 0;
     margin: 0;
@@ -114,6 +114,7 @@ body{
     border-right: 1px solid rgba(0,0,0,0.2);
     cursor: text;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
@@ -259,6 +260,7 @@ body{
 }
 .form-element:focus{
     color: rgb(105,105,105);
+    outline: none;
 }
 .textarea:focus{
     color: rgb(105,105,105);
